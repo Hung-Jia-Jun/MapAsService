@@ -8,7 +8,7 @@ function queryCar()
 	document.getElementById("process").style.display = 'block';
 
 	//復歸進度條寬度
-	document.getElementById("processStatus").style.width = "0%"
+	document.getElementById("processStatus").style.width = "0%" 
 	//顯示目前處理進度文字
 	document.getElementById("process").innerText="";
 	$.get("fetchAllMotor",
