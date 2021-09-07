@@ -1,0 +1,25 @@
+{
+  "name": "MapAsService",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hung-Jia-Jun/MapAsService.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hung-Jia-Jun/MapAsService/issues"
+  },
+  "homepage": "https://github.com/Hung-Jia-Jun/MapAsService#readme"
+}
