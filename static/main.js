@@ -5,7 +5,7 @@ function queryCar()
 	//顯示"載入中..."的文字
 	document.getElementById("loading").style.display = 'block';
 	//顯示目前處理進度文字
-	document.getElementById("process").style.display = 'block';
+	document.getElementById("process").style.display = 'block'; 
 
 	//復歸進度條寬度
 	document.getElementById("processStatus").style.width = "0%" 
