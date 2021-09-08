@@ -30,7 +30,7 @@ def index():
 #取得用戶輸入的網址
 @app.route("/fetchAllMotor")
 def fetchAllMotor():
-    socketio.emit('server_response', { 'data' : '查詢iRent中...','status': "20" })
+    socketio.emit('server_response', { 'data' : '查詢iRent 機車中...','status': "20" })
     _iRent = iRent()
     iRentData = _iRent.fetch()
 
@@ -44,7 +44,7 @@ def fetchAllMotor():
     socketio.emit('server_response', { 'data' : '查詢GoShare中...','status': "80" })
     _GoShare = GoShare()
     GoShareData = _GoShare.fetch()
-    socketio.emit('server_response', { 'data' : '查詢完成，正在繪製地圖中','status': "100" })
+    socketio.emit('server_response', { 'data' : '查詢完成，正在繪製地圖...','status': "90" })
     integration=[
                     {
                         "name" : "iRent",

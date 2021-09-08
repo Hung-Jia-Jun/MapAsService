@@ -15,7 +15,6 @@ function queryCar()
 		function (data) {
 			document.getElementById("queryCar").disabled = false
 			//關閉"載入中..."的文字
-			document.getElementById("loading").style.display = 'none';
 			navigator.geolocation.getCurrentPosition((position)=>showPosition(position,data));
 
 		}
@@ -98,7 +97,7 @@ function setMarkers(motors) {
 	markers = markerAppend(markers,iRentCar,baseMap)
 	markers = markerAppend(markers,wemo_motors,baseMap)
 	markers = markerAppend(markers,GoShare_motors,baseMap)
-		
+	document.getElementById("loading").style.display = 'none';
 
 
 }
