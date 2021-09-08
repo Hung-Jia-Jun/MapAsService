@@ -30,15 +30,18 @@ def index():
 #取得用戶輸入的網址
 @app.route("/fetchAllMotor")
 def fetchAllMotor():
-    socketio.emit('server_response', { 'data' : '查詢iRent中...','status': "30" })
+    socketio.emit('server_response', { 'data' : '查詢iRent中...','status': "20" })
     _iRent = iRent()
     iRentData = _iRent.fetch()
 
+    socketio.emit('server_response', { 'data' : '查詢iRent路邊租還中...','status': "40" })
+    iRentCarData = _iRent.carFetch()
+    
     socketio.emit('server_response', { 'data' : '查詢Wemo中...','status': "60" })
     _wemo = wemo()
     wemoData = _wemo.fetch()
 
-    socketio.emit('server_response', { 'data' : '查詢GoShare中...','status': "90" })
+    socketio.emit('server_response', { 'data' : '查詢GoShare中...','status': "80" })
     _GoShare = GoShare()
     GoShareData = _GoShare.fetch()
     socketio.emit('server_response', { 'data' : '查詢完成，正在繪製地圖中','status': "100" })
@@ -47,6 +50,11 @@ def fetchAllMotor():
                         "name" : "iRent",
                         "data" : iRentData,
                         "count" : str(len(iRentData)),
+                    },
+                    {
+                        "name" : "iRentCar",
+                        "data" : iRentCarData,
+                        "count" : str(len(iRentCarData)),
                     },
                     {
                         "name" : "wemo",
