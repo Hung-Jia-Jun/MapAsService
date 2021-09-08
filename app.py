@@ -65,18 +65,14 @@ def fetchAllMotor():
 			status=200,
 			mimetype="application/json")
 
-# @cross_origin()
 @socketio.on('Client_event')
+@cross_origin()
 #接收來自前端的訊息
 def Client_event(msg):
 	print(msg)
 	#發送訊息給前端
 	# socketio.emit('server_response', { 'data': "OK" })
 	return Response(status=200)
-
-# @socketio.on('my event')
-# def Client_event(msg):
-#     print('received msg: ' + str(msg))
 
 if __name__ == "__main__":
 	if "isHeroku" in os.environ:
